@@ -1,0 +1,16 @@
+
+${flash.message }
+<p>
+
+
+What is ${form} ${vachan} for root ${root}
+<p> 
+<g:form action='answer'>
+<g:radioGroup values='["${choice1 }" ,"${choice2 }","${choice3 }" ]' labels='["${choice1 }" ,"${choice2 }","${choice3 }" ]' name="answer">
+<p>
+ ${it.radio }${it.label }
+</g:radioGroup>
+<p>
+<g:hiddenField name="correct" value="${correct}" />
+<g:submitButton name="Submit"/>
+</g:form>

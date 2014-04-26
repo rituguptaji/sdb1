@@ -1,0 +1,11 @@
+  production {
+        dataSource {
+      pooled = false
+	  logSql=true
+  driverClassName = "org.hsqldb.jdbcDriver"
+  username = "sa"
+  password = ""
+            dbCreate = "update"
+               url = "jdbc:hsqldb:file:db/devDB"
+        }
+    }

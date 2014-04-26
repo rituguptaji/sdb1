@@ -1,0 +1,78 @@
+package sdb1
+import java.util.Random
+class QuizController {
+	def index() {
+		println  flash.message
+		println 'params are' + params
+		def results = Word.executeQuery('select distinct root from Word')
+		def vachan="dweVachan"
+		println results
+		Random randomno = new Random();
+		def root = results.get(randomno.nextInt(results.size()))
+		def samp = Word.findAllByRoot(root)
+		println samp.toString() + samp.size()
+	    def choice1, choice2, choice3
+		def choice1samp =samp.get(randomno.nextInt(samp.size()))
+		def rottChoice= choice1samp.rootSanskrit
+		//choose random singular, dual or plural
+		if (randomno.nextInt(3)==0) {
+			choice1=choice1samp.ekVachanSanskrit
+			vachan='ek Vachan'
+			choice2=samp.get(randomno.nextInt(samp.size())).ekVachanSanskrit
+			choice3=samp.get(randomno.nextInt(samp.size())).ekVachanSanskrit
+		} else if (randomno.nextInt(3)==1) {
+			choice1=choice1samp.dweVachanSanskrit
+			vachan='dwe Vachan'
+			choice2=samp.get(randomno.nextInt(samp.size())).dweVachanSanskrit
+			choice3=samp.get(randomno.nextInt(samp.size())).dweVachanSanskrit
+		} else  {
+			choice1=choice1samp.bahuVachanSanskrit
+			vachan='bahu Vachan'
+			choice2=samp.get(randomno.nextInt(samp.size())).bahuVachanSanskrit
+			choice3=samp.get(randomno.nextInt(samp.size())).bahuVachanSanskrit
+		}
+		
+	//	def dwe=choice1samp.dweVachanSanskrit
+	//	def choice1samp =samp.get(1).dweVachanSanskrit
+		samp.each() { print " ${it}" }; println "";
+		
+		//println samp.get(1))
+		//[form:"tritiya", vachan:"eka-vachana", root:"gajah", choice1:"गजः", choice2:"गजाः", choice3:"गजं", correct:"गजं"]
+		[form:choice1samp.vibhakti, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:choice1]
+		
+	
+	}
+	/*
+    def index() { 
+		println  flash.message
+		println 'params are' + params
+		def results = Word.executeQuery('select distinct root from Word')
+		
+		println results
+		def samp = Word.findAllByRoot('gajah')
+		println samp.toString() + samp.size()
+		Random randomno = new Random();
+		def choice1samp =samp.get(randomno.nextInt(2)).dweVachanSanskrit
+	//	def choice1samp =samp.get(1).dweVachanSanskrit
+		samp.each() { print " ${it}" }; println "";
+		
+		//println samp.get(1))
+		//[form:"tritiya", vachan:"eka-vachana", root:"gajah", choice1:"गजः", choice2:"गजाः", choice3:"गजं", correct:"गजं"]
+		[form:"tritiya", vachan:"eka-vachana", root:"gajah",choice1:choice1samp, choice2:"गजाः", choice3:"गजं", correct:"गजं"]
+		
+	
+	} */
+	def answer() {
+		def userAnswer= params.answer
+		def correct= params.correct
+		if( userAnswer==correct)
+		 //render text:"you got it"
+		  flash.message="you got it"
+		  else {
+			  
+		  flash.message="Oops, correct answer is " +correct
+		 
+		  }
+		  redirect action:"index"
+	}
+}
