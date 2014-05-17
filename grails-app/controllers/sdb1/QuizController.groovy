@@ -17,20 +17,22 @@ class QuizController {
 			root = results.get(randomno.nextInt(results.size()))
 			samp = Word.findAllByRoot(root)
 		}
-		Collections.shuffle(samp)
+	//	Collections.shuffle(samp)
 		println samp.toString() + samp.size()
-	    def choice1, choice2, choice3
+	    def choice1, choice2, choice3,rottChoice, correct
 		def choice1samp =samp.get(0)
 		def choice2samp =samp.get(1)
 		def choice3samp =samp.get(2)
-		def rottChoice= appendWords(choice1samp.root,choice1samp.rootSanskrit)
+		def form 
+		    rottChoice= appendWords(choice1samp.root,choice1samp.rootSanskrit)
 		//choose random singular, dual or plural
-		if (randomno.nextInt(3)==0) {
+			def random =randomno.nextInt(3)
+		if (random==0) {
 			choice1= appendWords(choice1samp.ekVachanSanskrit , choice1samp.ekVachan )
 			vachan=' ek Vachan-एकवचन '
 			choice2=appendWords(choice2samp.ekVachanSanskrit ,choice2samp.ekVachan)
 			choice3=appendWords(choice3samp.ekVachanSanskrit ,choice3samp.ekVachan)
-		} else if (randomno.nextInt(3)==1) {
+		} else if (random==1) {
 			choice1=appendWords(choice1samp.dweVachanSanskrit , choice1samp.dweVachan )
 			vachan=' dwe Vachan-द्विवचन '
 			choice2=appendWords(choice2samp.dweVachanSanskrit ,choice2samp.dweVachan)
@@ -43,14 +45,26 @@ class QuizController {
 			choice3=appendWords(choice3samp.bahuVachanSanskrit ,choice3samp.bahuVachan)
 	
 		}
-		
+		random =randomno.nextInt(3)
+		//choose random which vibhakti we are after
+		if (random==0) {
+			form = choice1samp.vibhakti
+			correct = choice1
+		} else if (random==1) {
+			form = choice2samp.vibhakti
+			correct =choice2
+		}
+		else {
+			form = choice3samp.vibhakti
+			correct =choice3
+		}
 	//	def dwe=choice1samp.dweVachanSanskrit
 	//	def choice1samp =samp.get(1).dweVachanSanskrit
 		samp.each() { print " ${it}" }; println "";
 		 
 		//println samp.get(1))
 		//[form:"tritiya", vachan:"eka-vachana", root:"gajah", choice1:"à¤—à¤œà¤ƒ", choice2:"à¤—à¤œà¤¾à¤ƒ", choice3:"à¤—à¤œà¤‚", correct:"à¤—à¤œà¤‚"]
-		[form:choice1samp.vibhakti, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:choice1]
+		[form:form, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:correct]
 		
 	
 	}
