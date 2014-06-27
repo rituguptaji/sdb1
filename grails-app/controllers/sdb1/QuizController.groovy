@@ -17,7 +17,7 @@ class QuizController {
 			root = results.get(randomno.nextInt(results.size()))
 			samp = Word.findAllByRoot(root)
 		}
-	//	Collections.shuffle(samp)
+		Collections.shuffle(samp)
 		println samp.toString() + samp.size()
 	    def choice1, choice2, choice3,rottChoice, correct
 		def choice1samp =samp.get(0)
