@@ -1,8 +1,10 @@
 
+<g:link action="list" params="${[correctAnswers:correctAnswers, totalQuestions:totalQuestions ] }" >choose roots </g:link>
 <font color="red"><h2> ${flash.message }</h2></font>
+
 <pre>
-<b><h1>
-What is ${form} ${vachan} for  ${root}</h1></b>
+<b><h2>
+Score : ${correctAnswers} correct out of  ${totalQuestions}  </h2> <h1>What is ${form} ${vachan} for  ${root}</h1></b>
 </pre> 
 <g:form action='answer'>
 <font color="green">
@@ -14,5 +16,8 @@ What is ${form} ${vachan} for  ${root}</h1></b>
 </p></h3></b>
 </font>
 <g:hiddenField name="correct" value="${correct}" />
+<g:hiddenField name="roots" value="${roots}" />
+<g:hiddenField name="correctAnswers" value="${correctAnswers}" />
+<g:hiddenField name="totalQuestions" value="${totalQuestions}" />
 <g:submitButton name="Submit"/>
 </g:form>
