@@ -1,5 +1,5 @@
 
-<g:link action="list" params="${[correctAnswers:correctAnswers, totalQuestions:totalQuestions ] }" >choose roots </g:link>
+<h2><g:link action="list" params="${[correctAnswers:correctAnswers, totalQuestions:totalQuestions ] }" >choose roots </g:link></h2>
 <font color="red"><h2> ${flash.message }</h2></font>
 
 <pre>
