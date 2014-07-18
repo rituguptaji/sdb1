@@ -4,19 +4,63 @@ class QuizController {
 	def String appendWords (String one , String two) {
 		one + '-' + two
 	}
+	def list () {
+		println 'params for list are' + params
+		def correctAnswers = params.correctAnswers
+		def totalQuestions = params.totalQuestions
+		if (correctAnswers == null) correctAnswers = "0"
+		if (totalQuestions == null) totalQuestions = "0"
+		def results = Word.executeQuery('select distinct root from Word group by root having count(*)>=3' )
+		[words: results, correctAnswers: correctAnswers, totalQuestions:totalQuestions]
+	}
+	def chooseRoots() {
+		println 'params  are' + params
+		def correctAnswers = params.correctAnswers
+		def totalQuestions = params.totalQuestions
+		if (correctAnswers == null) correctAnswers = "0"
+		if (totalQuestions == null) totalQuestions = "0"
+		def selectedValues = params.chose
+		List valuelist = new ArrayList()
+		
+		if(selectedValues instanceof String) {
+			valuelist.add(selectedValues)
+		} else {
+			valuelist = selectedValues as List
+		}
+		def chose= valuelist.collect().join(',')
+//	def chose= params.chose.collect().join(',')
+
+		redirect(action: "index", params:[roots:chose, correctAnswers: correctAnswers, totalQuestions:totalQuestions])
+	}
 	def index() {
 		println  flash.message
-		println 'params are' + params
-		def results = Word.executeQuery('select distinct root from Word')
+		println 'params for index are' + params
+		def correctAnswers = params.correctAnswers
+		def totalQuestions = params.totalQuestions
+		if (correctAnswers == null) correctAnswers = "0"
+		if (totalQuestions == null) totalQuestions = "0"
+		def results =[]// ['ashva', 'pati' ]
+		def res  = []
+		def roots = params.roots
+		if(roots == null) {
+			println "getting roots from db"
+		 results = Word.executeQuery('select distinct root from Word group by root having count(*)>=3')
+		 roots= results.collect().join(',')
+		 
+		} else{
+	     res = roots.split(',').collect{it as String}
+		results = res
+
+		}
+	
 		def vachan="dweVachan"
-		println results
+		println 'class is ' + results.getClass()
+		println results + results.count
 		Random randomno = new Random();
 		def root = results.get(randomno.nextInt(results.size()))
+		println "root before samp" + root
 		def samp = Word.findAllByRoot(root)
-		while (samp.size()  <3) {
-			root = results.get(randomno.nextInt(results.size()))
-			samp = Word.findAllByRoot(root)
-		}
+		
 		Collections.shuffle(samp)
 		println samp.toString() + samp.size()
 	    def choice1, choice2, choice3,rottChoice, correct
@@ -64,7 +108,7 @@ class QuizController {
 		 
 		//println samp.get(1))
 		//[form:"tritiya", vachan:"eka-vachana", root:"gajah", choice1:"à¤—à¤œà¤ƒ", choice2:"à¤—à¤œà¤¾à¤ƒ", choice3:"à¤—à¤œà¤‚", correct:"à¤—à¤œà¤‚"]
-		[form:form, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:correct]
+		[form:form, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:correct, roots: roots, correctAnswers: correctAnswers, totalQuestions:totalQuestions]
 		
 	
 	}
@@ -89,16 +133,27 @@ class QuizController {
 	
 	} */
 	def answer() {
+		println 'params in answer are' + params
 		def userAnswer= params.answer
 		def correct= params.correct
-		if( userAnswer==correct)
+		def roots = params.roots
+		def correctAnswers = params.correctAnswers as Integer
+		def totalQuestions = params.totalQuestions as Integer
+		totalQuestions+=1
+		
+		println 'params in answer are' + correctAnswers.getClass()
+		if( userAnswer==correct) {
 		 //render text:"you got it"
 		  flash.message="you got it"
+		  correctAnswers +=1
+		}
 		  else {
 			  
 		  flash.message="Oops, correct answer is " +correct
 		 
 		  }
-		  redirect action:"index"
+		  params.correctAnswers=correctAnswers.toString()
+		  params.totalQuestions= totalQuestions.toString()
+		  redirect action:"index", params : params
 	}
 }
