@@ -19,5 +19,6 @@ Score : ${correctAnswers} correct out of  ${totalQuestions}  </h2> <h1>What is $
 <g:hiddenField name="roots" value="${roots}" />
 <g:hiddenField name="correctAnswers" value="${correctAnswers}" />
 <g:hiddenField name="totalQuestions" value="${totalQuestions}" />
+<g:hiddenField name="vibhakti" value="${vibhakti}" />
 <g:submitButton name="Submit"/>
-</g:form>
+</g:form> 
