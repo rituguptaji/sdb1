@@ -483,3 +483,519 @@ update word set verifier="Not verified" [42122-164]
 	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
 	at java.lang.Thread.run(Thread.java:662)
+05-20 10:44:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "'sf' (2)"; SQL statement:
+insert into word (root, root_meaning, root_sanskrit, version , antak) values ('fsdf','dgsd','dgsd', 1,'sf') [22001-164]
+05-20 10:45:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DESC[*] WORD "; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc WORD [42001-164]
+05-20 10:46:29 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "DESC[*] WORD "; expected "DELETE, DROP, DECLARE, DEALLOCATE, {"; SQL statement:
+desc WORD [42001-164]
+05-20 11:04:21 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SHOW COLUMNS FROM WORD
+INSERT[*] INTO WORD (
+
+VERSION,
+ANTAK,
+BAHU_VACHAN,
+BAHU_VACHAN_MEANING,
+BAHU_VACHAN_SANSKRIT,
+DWE_VACHAN,
+DWE_VACHAN_MEANING,
+DWE_VACHAN_SANSKRIT,
+EK_VACHAN,
+EK_VACHAN_MEANING,
+EK_VACHAN_SANSKRIT,
+GENDER,
+ROOT,
+ROOT_MEANING,
+ROOT_SANSKRIT,
+VIBHAKTI,
+AUTHOR,
+)
+VALUES (
+0,
+'a',
+'BAHU_VACHAN',
+'BAHU_VACHAN_MEANING',
+'BAHU_VACHAN_SANSKRIT',
+'DWE_VACHAN',
+'DWE_VACHAN_MEANING',
+'DWE_VACHAN_SANSKRIT',
+'EK_VACHAN',
+'EK_VACHAN_MEANING',
+'EK_VACHAN_SANSKRIT',
+'GENDER',
+'ROOT',
+'ROOT_MEANING',
+'ROOT_SANSKRIT',
+'VIBHAKTI',
+'AUTHOR',
+'VERIFIER'
+) "; SQL statement:
+show columns from word
+insert into word (
+
+VERSION,
+ANTAK,
+BAHU_VACHAN,
+BAHU_VACHAN_MEANING,
+BAHU_VACHAN_SANSKRIT,
+DWE_VACHAN,
+DWE_VACHAN_MEANING,
+DWE_VACHAN_SANSKRIT,
+EK_VACHAN,
+EK_VACHAN_MEANING,
+EK_VACHAN_SANSKRIT,
+GENDER,
+ROOT,
+ROOT_MEANING,
+ROOT_SANSKRIT,
+VIBHAKTI,
+AUTHOR,
+)
+values (
+0,
+'a',
+'BAHU_VACHAN',
+'BAHU_VACHAN_MEANING',
+'BAHU_VACHAN_SANSKRIT',
+'DWE_VACHAN',
+'DWE_VACHAN_MEANING',
+'DWE_VACHAN_SANSKRIT',
+'EK_VACHAN',
+'EK_VACHAN_MEANING',
+'EK_VACHAN_SANSKRIT',
+'GENDER',
+'ROOT',
+'ROOT_MEANING',
+'ROOT_SANSKRIT',
+'VIBHAKTI',
+'AUTHOR',
+'VERIFIER'
+) [42000-164]
+05-20 11:05:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SHOW COLUMNS FROM WORD
+INSERT[*] INTO WORD (
+
+VERSION,
+ANTAK,
+BAHU_VACHAN,
+BAHU_VACHAN_MEANING,
+BAHU_VACHAN_SANSKRIT,
+DWE_VACHAN,
+DWE_VACHAN_MEANING,
+DWE_VACHAN_SANSKRIT,
+EK_VACHAN,
+EK_VACHAN_MEANING,
+EK_VACHAN_SANSKRIT,
+GENDER,
+ROOT,
+ROOT_MEANING,
+ROOT_SANSKRIT,
+VIBHAKTI,
+AUTHOR,
+)
+VALUES (
+0,
+'a',
+'BAHU_VACHAN',
+'BAHU_VACHAN_MEANING',
+'BAHU_VACHAN_SANSKRIT',
+'DWE_VACHAN',
+'DWE_VACHAN_MEANING',
+'DWE_VACHAN_SANSKRIT',
+'EK_VACHAN',
+'EK_VACHAN_MEANING',
+'EK_VACHAN_SANSKRIT',
+'GENDER',
+'ROOT',
+'ROOT_MEANING',
+'ROOT_SANSKRIT',
+'VIBHAKTI',
+'AUTHOR',
+'VERIFIER'
+) "; SQL statement:
+show columns from word
+insert into word (
+
+VERSION,
+ANTAK,
+BAHU_VACHAN,
+BAHU_VACHAN_MEANING,
+BAHU_VACHAN_SANSKRIT,
+DWE_VACHAN,
+DWE_VACHAN_MEANING,
+DWE_VACHAN_SANSKRIT,
+EK_VACHAN,
+EK_VACHAN_MEANING,
+EK_VACHAN_SANSKRIT,
+GENDER,
+ROOT,
+ROOT_MEANING,
+ROOT_SANSKRIT,
+VIBHAKTI,
+AUTHOR,
+)
+values (
+0,
+'a',
+'BAHU_VACHAN',
+'BAHU_VACHAN_MEANING',
+'BAHU_VACHAN_SANSKRIT',
+'DWE_VACHAN',
+'DWE_VACHAN_MEANING',
+'DWE_VACHAN_SANSKRIT',
+'EK_VACHAN',
+'EK_VACHAN_MEANING',
+'EK_VACHAN_SANSKRIT',
+'GENDER',
+'ROOT',
+'ROOT_MEANING',
+'ROOT_SANSKRIT',
+'VIBHAKTI',
+'AUTHOR',
+'VERIFIER'
+) [42000-164]
+05-20 11:05:24 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column count does not match; SQL statement:
+insert into word (
+
+VERSION,
+ANTAK,
+BAHU_VACHAN,
+BAHU_VACHAN_MEANING,
+BAHU_VACHAN_SANSKRIT,
+DWE_VACHAN,
+DWE_VACHAN_MEANING,
+DWE_VACHAN_SANSKRIT,
+EK_VACHAN,
+EK_VACHAN_MEANING,
+EK_VACHAN_SANSKRIT,
+GENDER,
+ROOT,
+ROOT_MEANING,
+ROOT_SANSKRIT,
+VIBHAKTI,
+AUTHOR,
+)
+values (
+0,
+'a',
+'BAHU_VACHAN',
+'BAHU_VACHAN_MEANING',
+'BAHU_VACHAN_SANSKRIT',
+'DWE_VACHAN',
+'DWE_VACHAN_MEANING',
+'DWE_VACHAN_SANSKRIT',
+'EK_VACHAN',
+'EK_VACHAN_MEANING',
+'EK_VACHAN_SANSKRIT',
+'GENDER',
+'ROOT',
+'ROOT_MEANING',
+'ROOT_SANSKRIT',
+'VIBHAKTI',
+'AUTHOR',
+'VERIFIER'
+) [21002-164]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.command.dml.Insert.prepare(Insert.java:226)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:415)
+	at org.h2.engine.Session.prepareCommand(Session.java:364)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1121)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1311)
+	at org.h2.server.web.WebApp.query(WebApp.java:1001)
+	at org.h2.server.web.WebApp.query(WebApp.java:977)
+	at org.h2.server.web.WebApp.process(WebApp.java:217)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:118)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.processFilterChain(UrlMappingsFilter.java:377)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:244)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:206)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at javax.servlet.FilterChain$doFilter.call(Unknown Source)
+	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+05-29 17:00:09 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "ROOTMEANING" not found; SQL statement:
+update word set rootMeaning='husband' where id=78 [42122-164]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.table.Table.getColumn(Table.java:596)
+	at org.h2.command.Parser.readTableColumn(Parser.java:655)
+	at org.h2.command.Parser.parseUpdate(Parser.java:689)
+	at org.h2.command.Parser.parsePrepared(Parser.java:427)
+	at org.h2.command.Parser.parse(Parser.java:279)
+	at org.h2.command.Parser.parse(Parser.java:251)
+	at org.h2.command.Parser.prepareCommand(Parser.java:217)
+	at org.h2.engine.Session.prepareLocal(Session.java:415)
+	at org.h2.engine.Session.prepareCommand(Session.java:364)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1121)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1311)
+	at org.h2.server.web.WebApp.query(WebApp.java:1001)
+	at org.h2.server.web.WebApp.query(WebApp.java:977)
+	at org.h2.server.web.WebApp.process(WebApp.java:217)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:118)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.processFilterChain(UrlMappingsFilter.java:377)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:244)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:206)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at javax.servlet.FilterChain$doFilter.call(Unknown Source)
+	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+05-29 17:05:27 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "HUSBANDWHERE" not found; SQL statement:
+update word set root_meaning= husbandwhere root=pati [42122-164]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:138)
+	at org.h2.command.dml.Update.prepare(Update.java:169)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:415)
+	at org.h2.engine.Session.prepareCommand(Session.java:364)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1121)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1311)
+	at org.h2.server.web.WebApp.query(WebApp.java:1001)
+	at org.h2.server.web.WebApp.query(WebApp.java:977)
+	at org.h2.server.web.WebApp.process(WebApp.java:217)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:118)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.processFilterChain(UrlMappingsFilter.java:377)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:244)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:206)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at javax.servlet.FilterChain$doFilter.call(Unknown Source)
+	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+05-29 17:05:35 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Column "PATI" not found; SQL statement:
+update word set root_meaning= 'husband' where root=pati [42122-164]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:138)
+	at org.h2.expression.Comparison.optimize(Comparison.java:161)
+	at org.h2.command.dml.Update.prepare(Update.java:162)
+	at org.h2.command.Parser.prepareCommand(Parser.java:218)
+	at org.h2.engine.Session.prepareLocal(Session.java:415)
+	at org.h2.engine.Session.prepareCommand(Session.java:364)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1121)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:152)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1311)
+	at org.h2.server.web.WebApp.query(WebApp.java:1001)
+	at org.h2.server.web.WebApp.query(WebApp.java:977)
+	at org.h2.server.web.WebApp.process(WebApp.java:217)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:118)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:153)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:647)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:728)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.processFilterChain(UrlMappingsFilter.java:377)
+	at org.codehaus.groovy.grails.web.mapping.filter.UrlMappingsFilter.doFilterInternal(UrlMappingsFilter.java:244)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.obtainContent(GrailsPageFilter.java:206)
+	at org.codehaus.groovy.grails.web.sitemesh.GrailsPageFilter.doFilter(GrailsPageFilter.java:152)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at javax.servlet.FilterChain$doFilter.call(Unknown Source)
+	at org.grails.plugin.resource.DevModeSanityFilter.doFilter(DevModeSanityFilter.groovy:44)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.servlet.mvc.GrailsWebRequestFilter.doFilterInternal(GrailsWebRequestFilter.java:69)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.codehaus.groovy.grails.web.filters.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:76)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:346)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:259)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:171)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1023)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:589)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:312)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+06-04 14:24:41 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patayaH', 'many husbands', 'पतयः', 'patii', 'two husbands', 'पती', 'patiH', 'a husband', 'पतिः', 'gender', 'pati', 'husband', 'पति', '1', 'ritu gupta', 'not verified') 
+INSERT[*] INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patiin', 'to many husbands', 'पतीन्', 'patii', 'to two husbands', 'पती', 'patim', 'to a husband', 'पतिम्', 'gender', 'pati', 'husband', 'पति', '2', 'ritu gupta', 'not verified') 
+INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patibhiH', 'with many husbands', 'पतिभिः', 'patibhyaam', 'with two husbands', 'पतिभ्याम्', 'patyaa', 'with a husband', 'पत्या', 'gender', 'pati', 'husband', 'पति', '3', 'ritu gupta', 'not verified') 
+INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patibhyaH', 'for many husbands', 'पतिभ्यः', 'patibhyaam', 'for two husbands', 'पतिभ्याम्', 'patye', 'for a husband', 'पत्ये', 'gender', 'pati', 'husband', 'पति', '4', 'ritu gupta', 'not verified') 
+INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patibhyaH', 'from many husbands', 'पतिभ्यः', 'patibyaam', 'from two husbands', 'पतिभ्याम्', 'patyuH', 'from a husband', 'पत्युः', 'gender', 'pati', 'husband', 'पति', '5', 'ritu gupta', 'not verified') 
+INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patiinaam', 'of many husbands', 'पतीनाम्', 'patyoH', 'of two husbands', 'पत्योः', 'patyuH', 'of a husband', 'पत्युः', 'gender', 'pati', 'husband', 'पति', '6', 'ritu gupta', 'not verified') 
+INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patiShu', 'in many husbands', 'पतिषु', 'patyoH', 'in two husbands', 'पत्योः', 'patyo', 'in a husband', 'पत्यो', 'gender', 'pati', 'husband', 'पति', '7', 'ritu gupta', 'not verified') 
+INSERT INTO WORD (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, VERIFIER) VALUES (0,'à¤‡','patayaH', 'O many husbands', 'पतयः', 'patii', 'O two husbands', 'पती', 'pate', 'O a husband', 'पते', 'gender', 'pati', 'husband', 'पति', '8', 'ritu gupta', 'not verified') "; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patayaH', 'many husbands', 'पतयः', 'patii', 'two husbands', 'पती', 'patiH', 'a husband', 'पतिः', 'gender', 'pati', 'husband', 'पति', '1', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patiin', 'to many husbands', 'पतीन्', 'patii', 'to two husbands', 'पती', 'patim', 'to a husband', 'पतिम्', 'gender', 'pati', 'husband', 'पति', '2', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patibhiH', 'with many husbands', 'पतिभिः', 'patibhyaam', 'with two husbands', 'पतिभ्याम्', 'patyaa', 'with a husband', 'पत्या', 'gender', 'pati', 'husband', 'पति', '3', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patibhyaH', 'for many husbands', 'पतिभ्यः', 'patibhyaam', 'for two husbands', 'पतिभ्याम्', 'patye', 'for a husband', 'पत्ये', 'gender', 'pati', 'husband', 'पति', '4', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patibhyaH', 'from many husbands', 'पतिभ्यः', 'patibyaam', 'from two husbands', 'पतिभ्याम्', 'patyuH', 'from a husband', 'पत्युः', 'gender', 'pati', 'husband', 'पति', '5', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patiinaam', 'of many husbands', 'पतीनाम्', 'patyoH', 'of two husbands', 'पत्योः', 'patyuH', 'of a husband', 'पत्युः', 'gender', 'pati', 'husband', 'पति', '6', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patiShu', 'in many husbands', 'पतिषु', 'patyoH', 'in two husbands', 'पत्योः', 'patyo', 'in a husband', 'पत्यो', 'gender', 'pati', 'husband', 'पति', '7', 'ritu gupta', 'not verified') 
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0,'à¤‡','patayaH', 'O many husbands', 'पतयः', 'patii', 'O two husbands', 'पती', 'pate', 'O a husband', 'पते', 'gender', 'pati', 'husband', 'पति', '8', 'ritu gupta', 'not verified') [42000-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patayaH', 'many husbands', 'पतयः', 'patii', 'two husbands', 'पती', 'patiH', 'a husband', 'पतिः', 'm-पु', 'pati', 'husband', 'पति', '1-प्रथमा', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patiin', 'to many husbands', 'पतीन्', 'patii', 'to two husbands', 'पती', 'patim', 'to a husband', 'पतिम्', 'm-पु', 'pati', 'husband', 'पति', '2-द्वितिया', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patibhiH', 'with many husbands', 'पतिभिः', 'patibhyaam', 'with two husbands', 'पतिभ्याम्', 'patyaa', 'with a husband', 'पत्या', 'm-पु', 'pati', 'husband', 'पति', '3-तृतीया', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patibhyaH', 'for many husbands', 'पतिभ्यः', 'patibhyaam', 'for two husbands', 'पतिभ्याम्', 'patye', 'for a husband', 'पत्ये', 'm-पु', 'pati', 'husband', 'पति', '4-चतुर्थ', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patibhyaH', 'from many husbands', 'पतिभ्यः', 'patibyaam', 'from two husbands', 'पतिभ्याम्', 'patyuH', 'from a husband', 'पत्युः', 'm-पु', 'pati', 'husband', 'पति', '5-पञ्चमी', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patiinaam', 'of many husbands', 'पतीनाम्', 'patyoH', 'of two husbands', 'पत्योः', 'patyuH', 'of a husband', 'पत्युः', 'm-पु', 'pati', 'husband', 'पति', '6-षष्टि', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patiShu', 'in many husbands', 'पतिषु', 'patyoH', 'in two husbands', 'पत्योः', 'patyo', 'in a husband', 'पत्यो', 'm-पु', 'pati', 'husband', 'पति', '7-सप्तमी', 'ritu gupta', 'not verified') [22001-164]
+06-04 14:25:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Value too long for column "ANTAK VARCHAR(1) NOT NULL": "STRINGDECODE(' \u0907') (2)"; SQL statement:
+insert into word (VERSION,ANTAK,BAHU_VACHAN,BAHU_VACHAN_MEANING,BAHU_VACHAN_SANSKRIT,DWE_VACHAN,DWE_VACHAN_MEANING,DWE_VACHAN_SANSKRIT,EK_VACHAN,EK_VACHAN_MEANING,EK_VACHAN_SANSKRIT,GENDER,ROOT,ROOT_MEANING,ROOT_SANSKRIT,VIBHAKTI,AUTHOR, verifier) values (0, ' इ','patayaH', 'O many husbands', 'पतयः', 'patii', 'O two husbands', 'पती', 'pate', 'O a husband', 'पते', 'm-पु', 'pati', 'husband', 'पति', '8-अस्टमी', 'ritu gupta', 'not verified') [22001-164]
