@@ -11,6 +11,7 @@ class QuizController {
 		if (correctAnswers == null) correctAnswers = "0"
 		if (totalQuestions == null) totalQuestions = "0"
 		def results = Word.executeQuery('select distinct root from Word group by root having count(*)>=3' )
+		//def vibhaktis  = Word.executeQuery('select distinct vibhakti from Word');
 		[words: results, correctAnswers: correctAnswers, totalQuestions:totalQuestions]
 	}
 	def chooseRoots() {
@@ -20,6 +21,7 @@ class QuizController {
 		if (correctAnswers == null) correctAnswers = "0"
 		if (totalQuestions == null) totalQuestions = "0"
 		def selectedValues = params.chose
+		def vibhakti = params.vibhakti
 		List valuelist = new ArrayList()
 		
 		if(selectedValues instanceof String) {
@@ -30,11 +32,13 @@ class QuizController {
 		def chose= valuelist.collect().join(',')
 //	def chose= params.chose.collect().join(',')
 
-		redirect(action: "index", params:[roots:chose, correctAnswers: correctAnswers, totalQuestions:totalQuestions])
+		redirect(action: "index", params:[roots:chose, correctAnswers: correctAnswers, totalQuestions:totalQuestions, vibhakti:vibhakti])
 	}
 	def index() {
 		println  flash.message
 		println 'params for index are' + params
+		def vibhakti = params.vibhakti
+		if( (vibhakti == '') || ( vibhakti =="all") )vibhakti= null
 		def correctAnswers = params.correctAnswers
 		def totalQuestions = params.totalQuestions
 		if (correctAnswers == null) correctAnswers = "0"
@@ -42,6 +46,7 @@ class QuizController {
 		def results =[]// ['ashva', 'pati' ]
 		def res  = []
 		def roots = params.roots
+			if( (roots == '') || ( roots =="all") )roots= null
 		if(roots == null) {
 			println "getting roots from db"
 		 results = Word.executeQuery('select distinct root from Word group by root having count(*)>=3')
@@ -50,23 +55,62 @@ class QuizController {
 		} else{
 	     res = roots.split(',').collect{it as String}
 		results = res
-
+		results.remove("all")
 		}
 	
 		def vachan="dweVachan"
+		def chosen  = 0
+		def samp =[]
 		println 'class is ' + results.getClass()
 		println results + results.count
 		Random randomno = new Random();
 		def root = results.get(randomno.nextInt(results.size()))
+		def choice1, choice2, choice3,rottChoice, correct
+		def choice1samp, choice2samp, choice3samp
 		println "root before samp" + root
-		def samp = Word.findAllByRoot(root)
-		
-		Collections.shuffle(samp)
-		println samp.toString() + samp.size()
-	    def choice1, choice2, choice3,rottChoice, correct
-		def choice1samp =samp.get(0)
-		def choice2samp =samp.get(1)
-		def choice3samp =samp.get(2)
+			//include the vibhakti in our list
+		if (vibhakti != null ) {
+			
+			def ourChoice= []
+			while (ourChoice==[]){
+				
+				root = results.get(randomno.nextInt(results.size()))
+			ourChoice=	Word.findAllByRootAndVibhakti(root,vibhakti)
+			println "ourChoice" + ourChoice
+			samp=	Word.findAllByRootAndVibhaktiNotEqual(root,vibhakti)
+			Collections.shuffle(samp)
+			def random =randomno.nextInt(3)
+			if (random==0) {
+				choice1samp=ourChoice.get(0)
+				choice2samp =samp.get(0)
+				choice3samp =samp.get(1)
+				chosen = 1
+			}else if (random==1) {
+				choice2samp=ourChoice.get(0)
+				choice1samp =samp.get(0)
+				choice3samp =samp.get(1)
+				chosen = 2
+			}else if (random==2) {
+				choice3samp=ourChoice.get(0)
+				choice1samp =samp.get(0)
+				choice2samp =samp.get(1)
+				chosen = 3
+			}
+			}
+			println 'vibhakti is not null' + vibhakti + root + choice1samp + choice2samp + choice3samp + samp + ourChoice
+			
+
+		} else {
+			root = results.get(randomno.nextInt(results.size()))
+			samp = Word.findAllByRoot(root)
+
+			Collections.shuffle(samp)
+			println samp.toString() + samp.size()
+
+			 choice1samp =samp.get(0)
+			 choice2samp =samp.get(1)
+			 choice3samp =samp.get(2)
+		}
 		def form 
 		    rottChoice= appendWords(choice1samp.root,choice1samp.rootSanskrit)
 		//choose random singular, dual or plural
@@ -89,18 +133,30 @@ class QuizController {
 			choice3=appendWords(choice3samp.bahuVachanSanskrit ,choice3samp.bahuVachan)
 	
 		}
-		random =randomno.nextInt(3)
-		//choose random which vibhakti we are after
-		if (random==0) {
-			form = choice1samp.vibhakti
-			correct = choice1
-		} else if (random==1) {
-			form = choice2samp.vibhakti
-			correct =choice2
-		}
-		else {
-			form = choice3samp.vibhakti
-			correct =choice3
+		if (vibhakti != null ) {
+			form= vibhakti
+			if (chosen ==1) {
+				correct = choice1
+			} else if (chosen ==2) {
+			correct = choice2
+			} else if (chosen ==3){
+			correct = choice3
+			}
+			
+		} else {	
+			random =randomno.nextInt(3)
+			//choose random which vibhakti we are after
+			if (random==0) {
+				form = choice1samp.vibhakti
+				correct = choice1
+			} else if (random==1) {
+				form = choice2samp.vibhakti
+				correct =choice2
+			}
+			else {
+				form = choice3samp.vibhakti
+				correct =choice3
+			}
 		}
 	//	def dwe=choice1samp.dweVachanSanskrit
 	//	def choice1samp =samp.get(1).dweVachanSanskrit
@@ -108,7 +164,7 @@ class QuizController {
 		 
 		//println samp.get(1))
 		//[form:"tritiya", vachan:"eka-vachana", root:"gajah", choice1:"à¤—à¤œà¤ƒ", choice2:"à¤—à¤œà¤¾à¤ƒ", choice3:"à¤—à¤œà¤‚", correct:"à¤—à¤œà¤‚"]
-		[form:form, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:correct, roots: roots, correctAnswers: correctAnswers, totalQuestions:totalQuestions]
+		[form:form, vachan:vachan, root:rottChoice,choice1:choice1, choice2:choice2, choice3:choice3, correct:correct, roots: roots, correctAnswers: correctAnswers, totalQuestions:totalQuestions, vibhakti:vibhakti]
 		
 	
 	}
