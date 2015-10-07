@@ -62,7 +62,7 @@ class QuizController {
 		def chosen  = 0
 		def samp =[]
 		println 'class is ' + results.getClass()
-		//println results + results.count
+		println results + results.count
 		Random randomno = new Random();
 		def root = results.get(randomno.nextInt(results.size()))
 		def choice1, choice2, choice3,rottChoice, correct
