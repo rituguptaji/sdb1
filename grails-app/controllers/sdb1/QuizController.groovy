@@ -1,4 +1,4 @@
-package sdb1
+﻿package sdb1
 import java.util.Random
 class QuizController {
 	def String appendWords (String one , String two) {
@@ -62,7 +62,7 @@ class QuizController {
 		def chosen  = 0
 		def samp =[]
 		println 'class is ' + results.getClass()
-		println results + results.count
+		//println results + results.count
 		Random randomno = new Random();
 		def root = results.get(randomno.nextInt(results.size()))
 		def choice1, choice2, choice3,rottChoice, correct
